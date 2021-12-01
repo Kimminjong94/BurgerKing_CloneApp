@@ -43,9 +43,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
 //
 //        imageBanner2.image = UIImage(named: "딜리버리오토바이 배너")
 //        imageBanner2.contentMode = .scaleAspectFit
-
-        
-
     
 }
     
