@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,28 +33,36 @@
                                                     </pageControl>
                                                 </subviews>
                                             </scrollView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Ca-Re-FDg">
-                                                <rect key="frame" x="0.0" y="492" width="414" height="300"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8Ca-Re-FDg">
+                                                <rect key="frame" x="0.0" y="492" width="414" height="270"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="킹오더 배너" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-rp-kI2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="300"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="딜리버리오토바이 배너" translatesAutoresizingMaskIntoConstraints="NO" id="8Qi-Ub-f9H">
-                                                        <rect key="frame" x="207.5" y="0.0" width="206.5" height="300"/>
-                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9y-oB-se5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="270"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="킹오더 배너"/>
+                                                        <connections>
+                                                            <segue destination="4E9-CV-RCf" kind="show" id="nHN-gt-oAe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqK-Xh-vdK">
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="270"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="딜리버리오토바이 배너"/>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="Uck-Ok-alR"/>
+                                                    <constraint firstItem="bqK-Xh-vdK" firstAttribute="leading" secondItem="v9y-oB-se5" secondAttribute="trailing" id="JVX-GW-zHT"/>
+                                                    <constraint firstAttribute="height" constant="270" id="Uck-Ok-alR"/>
                                                 </constraints>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="jAJ-VR-pb8">
-                                                <rect key="frame" x="0.0" y="787" width="414" height="20"/>
+                                                <rect key="frame" x="0.0" y="757" width="414" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Shg-Tk-DWW"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBT-24-sGb">
-                                                <rect key="frame" x="0.0" y="802" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="772" width="414" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="7Rx-KT-0BK"/>
                                                 </constraints>
@@ -63,7 +72,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="2cs-oP-Aqr">
-                                                <rect key="frame" x="0.0" y="946" width="414" height="25"/>
+                                                <rect key="frame" x="0.0" y="916" width="414" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="QSL-2y-7Jh"/>
                                                 </constraints>
@@ -119,6 +128,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2067" y="-457"/>
+        </scene>
+        <!--딜리버리 메뉴-->
+        <scene sceneID="IYh-B9-mPn">
+            <objects>
+                <viewController id="4E9-CV-RCf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="54S-6s-eAA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="배달도착지" translatesAutoresizingMaskIntoConstraints="NO" id="ieF-F8-EGl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="au3-ep-lAa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="주문로직메뉴바" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-NO-g9n">
+                                <rect key="frame" x="0.0" y="193" width="414" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="eLS-hg-SSd"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l5g-ul-QOF">
+                                <rect key="frame" x="0.0" y="303" width="414" height="520"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9V-fv-raa">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="jBY-j9-O7y"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="주문로직메뉴1"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROP-l5-s3x">
+                                        <rect key="frame" x="0.0" y="130" width="414" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="e83-8V-lfK"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="주문로직메뉴2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vz-Q4-FeF">
+                                        <rect key="frame" x="0.0" y="260" width="414" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="5n1-pZ-AhY"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="주문로직메뉴3"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4R-Pq-fmL">
+                                        <rect key="frame" x="0.0" y="390" width="414" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="rAY-v0-Sq1"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="주문로직메뉴4"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2sG-82-71d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2sG-82-71d" firstAttribute="trailing" secondItem="ieF-F8-EGl" secondAttribute="trailing" id="19P-Hr-4ce"/>
+                            <constraint firstItem="Pof-NO-g9n" firstAttribute="leading" secondItem="2sG-82-71d" secondAttribute="leading" id="1Ns-AN-kSt"/>
+                            <constraint firstItem="ieF-F8-EGl" firstAttribute="leading" secondItem="2sG-82-71d" secondAttribute="leading" id="A9r-GI-Yux"/>
+                            <constraint firstItem="2sG-82-71d" firstAttribute="trailing" secondItem="l5g-ul-QOF" secondAttribute="trailing" id="ISC-Up-dTc"/>
+                            <constraint firstItem="Pof-NO-g9n" firstAttribute="top" secondItem="ieF-F8-EGl" secondAttribute="bottom" id="Muq-xS-HSw"/>
+                            <constraint firstItem="l5g-ul-QOF" firstAttribute="leading" secondItem="2sG-82-71d" secondAttribute="leading" id="SfC-7B-F8Y"/>
+                            <constraint firstItem="l5g-ul-QOF" firstAttribute="top" secondItem="Pof-NO-g9n" secondAttribute="bottom" id="XQ6-Wc-eEa"/>
+                            <constraint firstItem="2sG-82-71d" firstAttribute="trailing" secondItem="Pof-NO-g9n" secondAttribute="trailing" id="h75-K8-9He"/>
+                            <constraint firstItem="ieF-F8-EGl" firstAttribute="top" secondItem="2sG-82-71d" secondAttribute="top" id="lxq-lS-NVT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="딜리버리 메뉴" id="fKs-lw-qsG">
+                        <barButtonItem key="leftBarButtonItem" id="t6I-K7-xsQ">
+                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="iOj-vb-O0J">
+                            <imageReference key="image" image="cart" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nav-R0-xxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3120" y="-457"/>
         </scene>
         <!--Home-->
         <scene sceneID="t3A-pz-yat">
@@ -496,6 +592,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="탭바 마이킹" id="eaT-Fw-kBR">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <size key="freeformSize" width="414" height="1100"/>
@@ -514,7 +611,10 @@
                         <viewLayoutGuide key="safeArea" id="EQ5-DG-330"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="탭바 주문" id="z09-rg-VOx"/>
+                    <tabBarItem key="tabBarItem" title="" image="주문탭바33" id="z09-rg-VOx">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                        <color key="badgeColor" systemColor="systemRedColor"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOB-R0-ew7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -571,8 +671,9 @@
             <point key="canvasLocation" x="1043.4782608695652" y="337.5"/>
         </scene>
     </scenes>
-    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <color key="tintColor" systemColor="systemRedColor"/>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="line" width="585" height="19.5"/>
         <image name="네비게이션바 메뉴" width="39.5" height="30.5"/>
@@ -589,8 +690,15 @@
         <image name="배너7" width="1091" height="333"/>
         <image name="배너8" width="1096" height="332"/>
         <image name="배너9" width="1090" height="328"/>
+        <image name="배달도착지" width="1170" height="287"/>
         <image name="앱설정" width="1118" height="1152"/>
         <image name="정보변경" width="229" height="56"/>
+        <image name="주문로직메뉴1" width="1170" height="374"/>
+        <image name="주문로직메뉴2" width="1170" height="371"/>
+        <image name="주문로직메뉴3" width="1170" height="375"/>
+        <image name="주문로직메뉴4" width="1170" height="332"/>
+        <image name="주문로직메뉴바" width="1170" height="300"/>
+        <image name="주문탭바33" width="76" height="77"/>
         <image name="최근주문내역" width="559" height="168"/>
         <image name="카피라이트" width="825" height="234"/>
         <image name="쿠폰갯수" width="159.5" height="17.5"/>
@@ -601,7 +709,6 @@
         <image name="킹오더 배너" width="298" height="360.5"/>
         <image name="킹오더용" width="202" height="91"/>
         <image name="탭바 마이킹" width="37" height="63"/>
-        <image name="탭바 주문" width="89" height="87"/>
         <image name="탭바 쿠폰" width="42" height="58.5"/>
         <image name="탭바 홈" width="36" height="61.5"/>
         <image name="패스트오더 배너" width="585" height="170.5"/>
