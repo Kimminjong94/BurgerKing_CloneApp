@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		584796812759127C001E2B52 /* AdvertisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584796802759127C001E2B52 /* AdvertisingViewController.swift */; };
 		585A0FD627587C3A00B39D88 /* OrderLogicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585A0FD527587C3A00B39D88 /* OrderLogicViewController.swift */; };
 		585A0FD827587DAE00B39D88 /* OrderLogicViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585A0FD727587DAE00B39D88 /* OrderLogicViewController2.swift */; };
 		585A0FDA2758B5A400B39D88 /* PaymentLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585A0FD92758B5A400B39D88 /* PaymentLogicController.swift */; };
@@ -16,10 +17,10 @@
 		588E5784275389E000E4A352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588E5782275389E000E4A352 /* Main.storyboard */; };
 		588E5786275389E100E4A352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588E5785275389E100E4A352 /* Assets.xcassets */; };
 		588E5789275389E100E4A352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588E5787275389E100E4A352 /* LaunchScreen.storyboard */; };
-		58EEBECA2755F7590011A582 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEBEC92755F7590011A582 /* CouponViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		584796802759127C001E2B52 /* AdvertisingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingViewController.swift; sourceTree = "<group>"; };
 		585A0FD527587C3A00B39D88 /* OrderLogicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLogicViewController.swift; sourceTree = "<group>"; };
 		585A0FD727587DAE00B39D88 /* OrderLogicViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLogicViewController2.swift; sourceTree = "<group>"; };
 		585A0FD92758B5A400B39D88 /* PaymentLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLogicController.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		588E5785275389E100E4A352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		588E5788275389E100E4A352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		588E578A275389E100E4A352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58EEBEC92755F7590011A582 /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +45,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5800E90A275A00C50070C709 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				585A0FD527587C3A00B39D88 /* OrderLogicViewController.swift */,
+				585A0FD727587DAE00B39D88 /* OrderLogicViewController2.swift */,
+				585A0FD92758B5A400B39D88 /* PaymentLogicController.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		5800E90B275A248D0070C709 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				584796802759127C001E2B52 /* AdvertisingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5800E90C275A24AE0070C709 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				588E577C275389E000E4A352 /* AppDelegate.swift */,
+				588E577E275389E000E4A352 /* SceneDelegate.swift */,
+				588E5785275389E100E4A352 /* Assets.xcassets */,
+				588E5787275389E100E4A352 /* LaunchScreen.storyboard */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		588E5770275389E000E4A352 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +93,12 @@
 		588E577B275389E000E4A352 /* RisingCamp_Week2_BurgerKing */ = {
 			isa = PBXGroup;
 			children = (
-				588E577C275389E000E4A352 /* AppDelegate.swift */,
-				588E577E275389E000E4A352 /* SceneDelegate.swift */,
-				588E5780275389E000E4A352 /* HomeViewController.swift */,
-				585A0FD527587C3A00B39D88 /* OrderLogicViewController.swift */,
-				585A0FD727587DAE00B39D88 /* OrderLogicViewController2.swift */,
-				585A0FD92758B5A400B39D88 /* PaymentLogicController.swift */,
-				588E5782275389E000E4A352 /* Main.storyboard */,
-				58EEBEC92755F7590011A582 /* CouponViewController.swift */,
-				588E5785275389E100E4A352 /* Assets.xcassets */,
-				588E5787275389E100E4A352 /* LaunchScreen.storyboard */,
 				588E578A275389E100E4A352 /* Info.plist */,
+				588E5780275389E000E4A352 /* HomeViewController.swift */,
+				588E5782275389E000E4A352 /* Main.storyboard */,
+				5800E90A275A00C50070C709 /* Payment */,
+				5800E90B275A248D0070C709 /* Onboarding */,
+				5800E90C275A24AE0070C709 /* Others */,
 			);
 			path = RisingCamp_Week2_BurgerKing;
 			sourceTree = "<group>";
@@ -151,8 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				588E5781275389E000E4A352 /* HomeViewController.swift in Sources */,
+				584796812759127C001E2B52 /* AdvertisingViewController.swift in Sources */,
 				585A0FD827587DAE00B39D88 /* OrderLogicViewController2.swift in Sources */,
-				58EEBECA2755F7590011A582 /* CouponViewController.swift in Sources */,
 				585A0FDA2758B5A400B39D88 /* PaymentLogicController.swift in Sources */,
 				585A0FD627587C3A00B39D88 /* OrderLogicViewController.swift in Sources */,
 				588E577D275389E000E4A352 /* AppDelegate.swift in Sources */,

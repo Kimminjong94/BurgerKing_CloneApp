@@ -12,7 +12,8 @@ class OrderLogicViewController: UIViewController {
     var images: [String] = ["메뉴1", "메뉴2", "메뉴3", "메뉴4"]
     var imagesPrice: [String] = ["메뉴가격1", "메뉴가격2", "메뉴가격3", "메뉴가격4"]
     
-
+    var lastPaymentList:[String] = ["결제내역메뉴1", "결제내역메뉴2", "결제내역메뉴3", "결제내역메뉴1"]
+    var lastPaymentPrice:[String] = ["최종결제금액1","최종결제금액2", "최종결제금액3", "최종결제금액4"]
 
 
     
@@ -24,11 +25,13 @@ class OrderLogicViewController: UIViewController {
         vc.imageToLoadPrice = imagesPrice[0]
         self.navigationController?.show(vc, sender: nil)
         
+        
+//        let vc2 = storyboard?.instantiateViewController(withIdentifier: "payment") as! OrderLogicViewController2
+//
+//        vc2.imageToLoadPayment = lastPaymentList[0]
+//        vc.imageToLoadPaymnetPrice = lastPaymentPrice[0]
+//        s 
 
-        
-        
-        
-        
         
     }
     

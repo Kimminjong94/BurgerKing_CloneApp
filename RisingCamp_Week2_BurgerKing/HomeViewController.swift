@@ -35,51 +35,20 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         }
         scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(images.count)), height: scrollView.frame.size.height)
         scrollView.delegate = self
-        
-        
-        
-//        imageBanner1.image = UIImage(named: "킹오더 배너")
-//        imageBanner1.contentMode = .scaleAspectFit
-//
-//        imageBanner2.image = UIImage(named: "딜리버리오토바이 배너")
-//        imageBanner2.contentMode = .scaleAspectFit
+    }
     
-}
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+    }
     
-//    func configureStackView() {
-//        view.addSubview(stackView!)
-//        stackView.axis = .horizontal
-//        stackView.distribution = .fillEqually
-//        stackView.spacing = 20
-//
-//
-//        addButtonToStackView()
-//        setStackViewConstraints()
-//
-//    }
-    
-//    func addButtonToStackView() {
-//        let numberOfButton = 2
-//
-//        for i in 1...numberOfButton {
-//            let button = UIButton()
-//            button.setTitle("\(i)", for: .normal)
-//            stackView.addArrangedSubview(button)
-//        }
-//    }
-        
-        
-        
-//        //constraintes
-//        func setStackViewConstraints() {
-//            stackView.translatesAutoresizingMaskIntoConstraints = false
-//            stackView.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 20).isActive = true
-//            stackView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor, constant: 50).isActive = true
-//            stackView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor, constant: -50).isActive = true
-//            stackView.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor, constant: -30).isActive = true
-//
-//
-//        }
+    override func viewWillAppear(_ animated: Bool) {
+        if Core.shared.isNewUser() {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "advertisingViewController") as! AdvertisingViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
+    }
 
 
 
@@ -88,21 +57,16 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = Int(pageNumber)
     }
     
-//    func configureStackView() {
-//        view.addSubview(stackView)
-//        stackView.axis = .horizontal
-//        stackView.distribution = .fillEqually
-//        stackView.spacing = 10
-        
-        
-//    }
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
+class Core {
+    static let shared = Core()
+    
+    func isNewUser() -> Bool {
+        return !UserDefaults.standard.bool(forKey: "isNewUser")
+    }
+    func setIsNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "isNewUser")
+    }
+    
+}
